@@ -2,7 +2,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: jenkins
+  name: USERNAME-jenkins
 rules:
 - apiGroups: [""]
   resources: ["namespaces"]
@@ -12,4 +12,4 @@ rules:
   verbs: ["delete"]
 - apiGroups: ["apps"]
   resources: ["deployments"]
-  verbs: ["delete", "create", "patch"]
+  verbs: ["get", "list", "delete", "create", "patch"]

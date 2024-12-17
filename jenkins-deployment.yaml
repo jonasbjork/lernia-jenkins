@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jenkins
+  name: USERNAME-jenkins
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins
+      app: USERNAME-jenkins
   template:
     metadata:
       labels:
-        app: jenkins
+        app: USERNAME-jenkins
     spec:
       containers:
-      - name: jenkins
+      - name: USERNAME-jenkins
         image: docker.io/jenkins/jenkins:lts-jdk17 
         imagePullPolicy: Always
         ports:
@@ -29,7 +29,7 @@ spec:
       volumes:
       - name: jenkins-home
         persistentVolumeClaim:
-          claimName: jenkins-pvc
+          claimName: USERNAME-jenkins-pvc
 
 
 

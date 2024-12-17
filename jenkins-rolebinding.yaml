@@ -5,9 +5,9 @@ metadata:
   name: jenkins-wordpress
 subjects:
 - kind: ServiceAccount
-  name: jenkins
+  name: USERNAME-jenkins
 roleRef:
   kind: Role
-  name: jenkins
+  name: USERNAME-jenkins
   apiGroup: rbac.authorization.k8s.io
 

@@ -2,13 +2,13 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: jenkins
+  name: USERNAME-jenkins
 spec:
-  host: jenkins.apps.cluster5.karoshi.se
+  host: USERNAME-jenkins.apps.cluster[ANGE DITT NUMMER HÄR].karoshi.se
   port:
     targetPort: 8080
   to:
     kind: Service
-    name: jenkins
+    name: USERNAME-jenkins
     weight: 100
   wildcardPolicy: None
